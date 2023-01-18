@@ -8,15 +8,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List of Sities-->
+        <!--NavigationController-->
         <scene sceneID="sKh-1s-4Sy">
             <objects>
-                <navigationController title="List of Sities" automaticallyAdjustsScrollViewInsets="NO" id="bsc-ua-MJ3" sceneMemberID="viewController">
+                <navigationController title="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="bsc-ua-MJ3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gMu-ve-Aqn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <navigationBarAppearance key="standardAppearance" backgroundEffect="regular"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -63,6 +63,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="MkL-nc-KP8"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="D57-3i-rLM"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -87,7 +88,7 @@
         <!--Detail View Controller-->
         <scene sceneID="h2n-Yd-0tZ">
             <objects>
-                <viewController id="jda-Ls-CLv" customClass="DetailViewController" customModule="WeatherOfCities" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="jda-Ls-CLv" customClass="DetailViewController" customModule="WeatherOfCities" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jBm-nP-HQc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

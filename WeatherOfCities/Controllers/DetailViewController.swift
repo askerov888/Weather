@@ -5,6 +5,7 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		print("detailVC starts")
     }
 	
 	@IBOutlet weak var image: UIImageView!

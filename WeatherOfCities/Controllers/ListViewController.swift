@@ -27,5 +27,13 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
 		return cell
 	}
 	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let story = UIStoryboard(name: "Main", bundle: nil)
+		guard let detailVC = (story.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController) else {
+			print("don't work detailVC")
+			return}
+		navigationController?.pushViewController(detailVC, animated: true)
+	}
+	
 	@IBOutlet weak var tableView: UITableView!
 }
