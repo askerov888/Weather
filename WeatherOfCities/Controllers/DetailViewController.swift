@@ -1,12 +1,14 @@
-
 import UIKit
 
 class DetailViewController: UIViewController {
-
+	let network = NetworkManager()
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-		print("detailVC starts")
+		network.go()
+		nameOfSity.text = n
     }
+	
 	
 	@IBOutlet weak var image: UIImageView!
 	@IBOutlet weak var nameOfSity: UILabel!

@@ -14,16 +14,16 @@ enum Sities {
 }
 
 class TestOfData {
-	var sities: [String] = [
-		"Bishkek",
-		"London",
-		"New York",
-		"Los Angeles",
-		"Paris",
-		"Tokyo",
-		"Sydney",
-		"Rio De Janeiro",
-		"Hong Kong",
-		"Dubai"
+	var sities: [String: Sities] = [
+		"Bishkek": .Bishkek,
+		"London": .London,
+		"New York": .NewYork,
+		"Los Angeles": .LosAngeles,
+		"Paris": .Paris,
+		"Tokyo": .Tokyo,
+		"Sydney": .Sydney,
+		"Rio De Janeiro": .RioDeJaneiro,
+		"Hong Kong": .HongKong,
+		"Dubai": .Dubai
 	]
 }

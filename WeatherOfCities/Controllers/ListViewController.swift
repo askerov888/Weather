@@ -6,7 +6,8 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
 		super.viewDidLoad()
 	}
 
-	let dataSource = TestOfData().sities.sorted(by: <)
+//	let dataSource = TestOfData().sities.keys.sorted(by: <)
+	var dataSource = TestOfData().sities
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		dataSource.count
@@ -16,7 +17,9 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
 		let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 		
 		var content = cell.defaultContentConfiguration()
-		content.text = dataSource[indexPath.row]
+		let dataForRows = dataSource.keys.sorted(by: <)
+		content.text = dataForRows[indexPath.row]
+//		content.text = dataSource[indexPath.row]
 		content.textProperties.font = UIFont.systemFont(ofSize: 20)
 		content.textProperties.alignment = .center
 		cell.contentConfiguration = content
@@ -30,8 +33,11 @@ class ListViewController: UIViewController, UITableViewDataSource, UITableViewDe
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		let story = UIStoryboard(name: "Main", bundle: nil)
 		guard let detailVC = (story.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController) else {
-			print("don't work detailVC")
 			return}
+		let dataForRows = dataSource.keys.sorted()
+		let selected = dataForRows[indexPath.row]
+//		detailVC.selectedSity = dataSource[selected]
+		detailVC.network.inputNameOfSity = dataSource[selected] ?? .Dubai
 		navigationController?.pushViewController(detailVC, animated: true)
 	}
 	
