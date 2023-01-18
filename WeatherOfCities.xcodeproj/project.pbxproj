@@ -15,6 +15,8 @@
 		63CAD096297637F0003F96FD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD095297637F0003F96FD /* ListViewController.swift */; };
 		63CAD09829763827003F96FD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD09729763827003F96FD /* DetailViewController.swift */; };
 		63CAD09B297638FC003F96FD /* TestOfData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD09A297638FC003F96FD /* TestOfData.swift */; };
+		63CAD09E29765F0A003F96FD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD09D29765F0A003F96FD /* NetworkManager.swift */; };
+		63CAD0A029766A2C003F96FD /* PrepareStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD09F29766A2C003F96FD /* PrepareStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		63CAD095297637F0003F96FD /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		63CAD09729763827003F96FD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		63CAD09A297638FC003F96FD /* TestOfData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOfData.swift; sourceTree = "<group>"; };
+		63CAD09D29765F0A003F96FD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		63CAD09F29766A2C003F96FD /* PrepareStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 		63CAD07D29763724003F96FD /* WeatherOfCities */ = {
 			isa = PBXGroup;
 			children = (
+				63CAD08C29763726003F96FD /* Info.plist */,
+				63CAD09C29765EE8003F96FD /* Network */,
 				63CAD099297638E2003F96FD /* Model */,
 				63CAD093297637BD003F96FD /* View */,
 				63CAD094297637D4003F96FD /* Controllers */,
@@ -72,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				63CAD08029763724003F96FD /* SceneDelegate.swift */,
-				63CAD08C29763726003F96FD /* Info.plist */,
 				63CAD08729763726003F96FD /* Assets.xcassets */,
 				63CAD07E29763724003F96FD /* AppDelegate.swift */,
 			);
@@ -103,6 +108,15 @@
 				63CAD09A297638FC003F96FD /* TestOfData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		63CAD09C29765EE8003F96FD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				63CAD09D29765F0A003F96FD /* NetworkManager.swift */,
+				63CAD09F29766A2C003F96FD /* PrepareStruct.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,11 +190,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CAD09E29765F0A003F96FD /* NetworkManager.swift in Sources */,
 				63CAD07F29763724003F96FD /* AppDelegate.swift in Sources */,
 				63CAD08129763724003F96FD /* SceneDelegate.swift in Sources */,
 				63CAD096297637F0003F96FD /* ListViewController.swift in Sources */,
 				63CAD09B297638FC003F96FD /* TestOfData.swift in Sources */,
 				63CAD09829763827003F96FD /* DetailViewController.swift in Sources */,
+				63CAD0A029766A2C003F96FD /* PrepareStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

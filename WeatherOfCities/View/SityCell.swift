@@ -1,23 +1,16 @@
-//
-//  SityCell.swift
-//  WeatherOfCities
-//
-//  Created by jarvis on 18/1/23.
-//
-
 import UIKit
 
 class SityCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+		let content = self.defaultContentConfiguration()
+		content.text = selected.row
+	}
 
-        // Configure the view for the selected state
-    }
-
+	
 }
