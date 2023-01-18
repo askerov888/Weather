@@ -6,8 +6,9 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		network.go()
-		nameOfSity.text = n
-    }
+		print(network.answer.name)
+//		nameOfSity.text = network.answer.name
+		}
 	
 	
 	@IBOutlet weak var image: UIImageView!

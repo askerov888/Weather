@@ -5,6 +5,8 @@ class NetworkManager {
 	
 	var inputNameOfSity: Sities = .Bishkek
 	
+	var answer: jsonAnswer!
+	
 	func go() {
 	var url: URL
 	switch inputNameOfSity {
@@ -30,7 +32,7 @@ class NetworkManager {
 			url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=Dubai&appid=3d8704a8f9b69c73745f86284f980bef&units=metric")!
 		}
 			
-		let task = session.dataTask(with: url) { data, response, error in
+		let task = session.dataTask(with: url) { [self] data, response, error in
 			if let error = error {
 				print(error)
 			}
@@ -41,7 +43,8 @@ class NetworkManager {
 				return
 			}
 			do {
-				let answer = try JSONDecoder().decode(jsonAnswer.self, from: data)
+				self.answer = try JSONDecoder().decode(jsonAnswer.self, from: data)
+				print(self.answer.name)
 			}
 			catch {
 				print(error)
