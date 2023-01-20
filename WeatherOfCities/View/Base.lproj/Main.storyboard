@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bsc-ua-MJ3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7oa-lW-VWF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -8,41 +8,78 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--NavigationController-->
-        <scene sceneID="sKh-1s-4Sy">
+        <!--Navigation Controller-->
+        <scene sceneID="fGV-H9-xah">
             <objects>
-                <navigationController title="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="bsc-ua-MJ3" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7oa-lW-VWF" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gMu-ve-Aqn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="A8l-p8-YTX">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <navigationBarAppearance key="standardAppearance" backgroundEffect="regular"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OIK-Vw-CZv"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bLh-Qf-qmO"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qhb-Dg-EP6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dn5-9u-Fjk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="44.927536231884062" y="69.642857142857139"/>
+            <point key="canvasLocation" x="955.07246376811599" y="69.642857142857139"/>
         </scene>
         <!--Weather of Sities-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="WeatherOfCities" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="aCA-fk-oAh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0vq-1r-9xE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose your sity" adjustsFontForContentSizeCategory="YES" minimumFontSize="30" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="T2S-lS-vwQ">
+                                <rect key="frame" x="120" y="273" width="174.5" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceh-7D-HWV">
+                                <rect key="frame" x="157" y="337" width="100" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="GJc-9h-hS2"/>
+                                    <constraint firstAttribute="height" constant="31" id="LzV-b2-8L4"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Search">
+                                    <color key="baseBackgroundColor" red="0.3385766044462386" green="0.74450482404117035" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aZz-iM-1Z1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ceh-7D-HWV" firstAttribute="centerX" secondItem="aCA-fk-oAh" secondAttribute="centerX" id="8Bz-bL-ieb"/>
+                            <constraint firstAttribute="bottom" secondItem="0vq-1r-9xE" secondAttribute="bottom" id="Ape-ci-wHk"/>
+                            <constraint firstItem="T2S-lS-vwQ" firstAttribute="centerX" secondItem="aCA-fk-oAh" secondAttribute="centerX" id="Bc8-oe-eYW"/>
+                            <constraint firstItem="0vq-1r-9xE" firstAttribute="leading" secondItem="aCA-fk-oAh" secondAttribute="leading" id="W23-IO-5qj"/>
+                            <constraint firstAttribute="trailing" secondItem="0vq-1r-9xE" secondAttribute="trailing" id="WIH-at-eAi"/>
+                            <constraint firstItem="ceh-7D-HWV" firstAttribute="top" secondItem="T2S-lS-vwQ" secondAttribute="bottom" constant="30" id="rbv-G3-l4q"/>
+                            <constraint firstItem="T2S-lS-vwQ" firstAttribute="top" secondItem="aZz-iM-1Z1" secondAttribute="top" constant="185" id="uIR-TW-Q94"/>
+                            <constraint firstItem="0vq-1r-9xE" firstAttribute="top" secondItem="aCA-fk-oAh" secondAttribute="top" id="yiN-S5-fvf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Weather of Sities" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="gzO-0O-fMl"/>
+                    <connections>
+                        <outlet property="searchButton" destination="ceh-7D-HWV" id="Iwg-cc-Izk"/>
+                        <outlet property="textField" destination="T2S-lS-vwQ" id="NWm-Wv-odb"/>
+                        <outlet property="viewImage" destination="0vq-1r-9xE" id="0Ue-gd-YOJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="955.07246376811599" y="69.642857142857139"/>
+            <point key="canvasLocation" x="1865.217391304348" y="69.642857142857139"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="h2n-Yd-0tZ">
@@ -136,10 +173,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGp-Zg-xhZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1824.6376811594205" y="69.642857142857139"/>
+            <point key="canvasLocation" x="2734.7826086956525" y="69.642857142857139"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
