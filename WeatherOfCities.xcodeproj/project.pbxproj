@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63042D93297A5E130065C8A7 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63042D92297A5E130065C8A7 /* API.swift */; };
 		63CAD07F29763724003F96FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD07E29763724003F96FD /* AppDelegate.swift */; };
 		63CAD08129763724003F96FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD08029763724003F96FD /* SceneDelegate.swift */; };
 		63CAD08629763724003F96FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63CAD08429763724003F96FD /* Main.storyboard */; };
@@ -14,12 +15,12 @@
 		63CAD08B29763726003F96FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63CAD08929763726003F96FD /* LaunchScreen.storyboard */; };
 		63CAD096297637F0003F96FD /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD095297637F0003F96FD /* ListViewController.swift */; };
 		63CAD09829763827003F96FD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD09729763827003F96FD /* DetailViewController.swift */; };
-		63CAD09B297638FC003F96FD /* TestOfData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD09A297638FC003F96FD /* TestOfData.swift */; };
 		63CAD09E29765F0A003F96FD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD09D29765F0A003F96FD /* NetworkManager.swift */; };
 		63CAD0A029766A2C003F96FD /* PrepareStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CAD09F29766A2C003F96FD /* PrepareStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63042D92297A5E130065C8A7 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		63CAD07B29763724003F96FD /* WeatherOfCities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherOfCities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63CAD07E29763724003F96FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63CAD08029763724003F96FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,7 +30,6 @@
 		63CAD08C29763726003F96FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63CAD095297637F0003F96FD /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		63CAD09729763827003F96FD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		63CAD09A297638FC003F96FD /* TestOfData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestOfData.swift; sourceTree = "<group>"; };
 		63CAD09D29765F0A003F96FD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		63CAD09F29766A2C003F96FD /* PrepareStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,7 +66,6 @@
 			children = (
 				63CAD08C29763726003F96FD /* Info.plist */,
 				63CAD09C29765EE8003F96FD /* Network */,
-				63CAD099297638E2003F96FD /* Model */,
 				63CAD093297637BD003F96FD /* View */,
 				63CAD094297637D4003F96FD /* Controllers */,
 				63CAD092297637AB003F96FD /* Helpers */,
@@ -102,19 +101,12 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		63CAD099297638E2003F96FD /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				63CAD09A297638FC003F96FD /* TestOfData.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		63CAD09C29765EE8003F96FD /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				63CAD09D29765F0A003F96FD /* NetworkManager.swift */,
 				63CAD09F29766A2C003F96FD /* PrepareStruct.swift */,
+				63042D92297A5E130065C8A7 /* API.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -194,8 +186,8 @@
 				63CAD07F29763724003F96FD /* AppDelegate.swift in Sources */,
 				63CAD08129763724003F96FD /* SceneDelegate.swift in Sources */,
 				63CAD096297637F0003F96FD /* ListViewController.swift in Sources */,
-				63CAD09B297638FC003F96FD /* TestOfData.swift in Sources */,
 				63CAD09829763827003F96FD /* DetailViewController.swift in Sources */,
+				63042D93297A5E130065C8A7 /* API.swift in Sources */,
 				63CAD0A029766A2C003F96FD /* PrepareStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -5,9 +5,6 @@ class DetailViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		network.go()
-		print(network.answer.name)
-//		nameOfSity.text = network.answer.name
 		}
 	
 	
