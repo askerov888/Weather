@@ -1,56 +1,60 @@
 import Foundation
 
-struct coord: Codable {
-	var lon: Double
-	var lat: Double
+struct Coord: Codable {
+	let lon: Double?
+	let lat: Double?
 }
 
-struct weather: Codable {
-	var id: Int
-	var main: String
-	var description: String
-	var icon: String
+struct Weather: Codable {
+	let id: Int?
+	let main: String?
+	let description: String?
+	let icon: String?
 }
 
-struct main: Codable {
-	var temp: Double
-	var pressure: Int
-//	var feels_like: Double
-	var humidity: Int
-	var temp_min: Double
-	var temp_max: Double
+struct Main: Codable {
+	let temp: Double?
+	let pressure: Int?
+	let feels_like: Double?
+	let humidity: Int?
+	let temp_min: Double?
+	let temp_max: Double?
+	let sea_level: Int?
+	let grnd_level: Int?
 }
 
-struct wind: Codable {
-	var speed: Double
-	var deg: Int
+struct Wind: Codable {
+	let speed: Double?
+	let deg: Int?
+	let gust: Double?
 }
 
-struct sys: Codable {
-	var type: Int
-	var id: Int
-	var message: Double
-	var country: String
-	var sunrise: Int
-	var sunset: Int
+struct Sys: Codable {
+	let type: Int?
+	let id: Int?
+	let message: Double?
+	let country: String?
+	let sunrise: Int?
+	let sunset: Int?
 }
 
-struct clouds: Codable {
-	var all: Int
+struct Clouds: Codable {
+	let all: Int?
 }
 
-struct jsonAnswer: Codable {
-	var coord: coord!
-	var weather: [weather]!
-	var base: String!
-	var main: main!
-	var visibility: Int!
-	var wind: wind!
-	var clouds: clouds!
-	var dt: Int!
-	var sys: sys!
-	var timezone: Int!
-	var id: Int!
-	var name: String
-	var code: Int
+struct JsonAnswer: Codable {
+	let coord: Coord?
+	let weather: [Weather]?
+	let base: String?
+	let main: Main?
+	let visibility: Int?
+	let wind: Wind?
+	let clouds: Clouds?
+	let dt: Int?
+	let sys: Sys?
+	let timezone: Int?
+	let id: Int?
+	let name: String?
+	let code: Int?
 }
+

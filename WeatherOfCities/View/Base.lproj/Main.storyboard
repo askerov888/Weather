@@ -16,6 +16,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="A8l-p8-YTX">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -29,7 +30,7 @@
         <!--Weather of Sities-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ListViewController" customModule="WeatherOfCities" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListViewController" id="BYZ-38-t0r" customClass="ListViewController" customModule="WeatherOfCities" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aCA-fk-oAh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -55,6 +56,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Search">
                                     <color key="baseBackgroundColor" red="0.3385766044462386" green="0.74450482404117035" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="searchAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="hK8-N9-BU6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aZz-iM-1Z1"/>
@@ -160,6 +164,7 @@
                             <constraint firstItem="lMb-8T-59j" firstAttribute="top" secondItem="qhf-Ix-pfN" secondAttribute="bottom" id="yPR-CB-6ov"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="qaf-eU-xvy"/>
                     <connections>
                         <outlet property="day1" destination="DZP-k4-iTx" id="QV2-Zf-FGv"/>
                         <outlet property="day2" destination="8yH-Fj-HHU" id="jIN-4Y-8K9"/>
