@@ -1,5 +1,23 @@
 import Foundation
 
+// Подготовка структуры для парсинга данных
+
+struct JsonAnswer: Codable {
+	let coord: Coord?
+	let weather: [Weather]?
+	let base: String?
+	let main: Main?
+	let visibility: Int?
+	let wind: Wind?
+	let clouds: Clouds?
+	let dt: Int?
+	let sys: Sys?
+	let timezone: Int?
+	let id: Int?
+	let name: String?
+	let code: Int?
+}
+
 struct Coord: Codable {
 	let lon: Double?
 	let lat: Double?
@@ -41,20 +59,3 @@ struct Sys: Codable {
 struct Clouds: Codable {
 	let all: Int?
 }
-
-struct JsonAnswer: Codable {
-	let coord: Coord?
-	let weather: [Weather]?
-	let base: String?
-	let main: Main?
-	let visibility: Int?
-	let wind: Wind?
-	let clouds: Clouds?
-	let dt: Int?
-	let sys: Sys?
-	let timezone: Int?
-	let id: Int?
-	let name: String?
-	let code: Int?
-}
-

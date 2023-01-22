@@ -6,17 +6,17 @@ class DetailViewController: UIViewController {
 		super.viewDidLoad()
 		taskGo()
 	}
-	
+	// свойства, в которое приходят данные и поля ввода
 	var sity = ""
 	
+	// Функция, запрос на сервер и обновление элементов
 	func taskGo() {
 		let session = URLSession.shared
-		
+		// замена пробелов
 		let sityWithoutSpace = sity.replacingOccurrences(of: " ", with: "%20")
-		
+		// создания URL и подставка ключа API и названия города
 		let url = URL(string:"https://api.openweathermap.org/data/2.5/weather?appid=\(API.key)&units=metric&q=\(sityWithoutSpace)")!
-		
-		
+		// создания непосрадественно таски
 		let taskURL = session.dataTask(with: url) { data, response, error in
 			if error != nil {
 				print("Error")
@@ -31,15 +31,15 @@ class DetailViewController: UIViewController {
 			guard let result = try? JSONDecoder().decode(JsonAnswer.self, from: data2) else {
 				return
 			}
-			
+			// вывод из названия иконки из ответа
 			guard let icon: String = result.weather?[0].icon else {return}
-			
+			// конвертация в URL
 			let urlImage = URL(string: "https://openweathermap.org/img/wn/\(icon)@4x.png")!
-
+			// конвертация в Data
 			guard let dataImage = try? Data(contentsOf: urlImage) else {
 				return
 			}
-			
+			// подставка данных по элементов в главном потоке main
 			DispatchQueue.main.async {
 				self.nameOfSity.text = result.name!
 				self.temp.text = String(format: "%0.f", result.main?.temp as! CVarArg)
