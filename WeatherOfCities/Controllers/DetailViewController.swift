@@ -31,6 +31,8 @@ class DetailViewController: UIViewController {
 			guard let result = try? JSONDecoder().decode(JsonAnswer.self, from: data2) else {
 				return
 			}
+			// вывод описания погоды из ответа
+			guard let main: String = result.weather?[0].main else {return}
 			// вывод из названия иконки из ответа
 			guard let icon: String = result.weather?[0].icon else {return}
 			// конвертация в URL
@@ -46,6 +48,7 @@ class DetailViewController: UIViewController {
 				self.minTemp.text = String(format: "%0.f", result.main?.temp_min as! CVarArg) + "\n min"
 				self.maxTemp.text = String(format: "%0.f", result.main?.temp_max as! CVarArg) + "\n max"
 				self.image.image = UIImage(data: dataImage)
+				self.main.text = main
 			}
 		}
 		taskURL.resume()
@@ -56,5 +59,6 @@ class DetailViewController: UIViewController {
 	@IBOutlet weak var temp: UILabel!
 	@IBOutlet weak var minTemp: UILabel!
 	@IBOutlet weak var maxTemp: UILabel!
+	@IBOutlet weak var main: UILabel!
 
 }
